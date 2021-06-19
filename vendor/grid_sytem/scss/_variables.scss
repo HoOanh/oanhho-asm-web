@@ -1,0 +1,35 @@
+$wide: (
+  mobile: (
+    width: 1200,
+  ),
+  tablet: (
+    width: 644,
+    min-width: 740,
+    max-width: 1023,
+  ),
+  pc: (
+    width: 984,
+    min-width: 1024,
+    max-width: 1239,
+  ),
+);
+
+$breakpoints: (
+  mobile: (
+    max: 4,
+    gap: 8,
+    columnName: 'c',
+  ),
+  tablet: (
+    max: 8,
+    gap: 16,
+    min-width: 740,
+    columnName: 'm',
+  ),
+  pc: (
+    max: 12,
+    gap: 24,
+    min-width: 1113,
+    columnName: 'l',
+  ),
+);

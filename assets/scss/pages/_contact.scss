@@ -1,0 +1,113 @@
+#modal {
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all 0.7s ease-out;
+
+    &.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-icon {
+    z-index: 9999999;
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+
+    @include screen($bp-pc) {
+        bottom: 4rem;
+        right: 2rem;
+    }
+
+    & > button {
+        width: 5rem;
+        height: 5rem;
+
+        border: none;
+        border-radius: 50%;
+        outline: none;
+
+        background-color: $white-color;
+        box-shadow: 0 5px 20px rgba($color: $black-color, $alpha: 0.5);
+
+        &:hover {
+            border-radius: 0.5rem;
+
+            & > i {
+                color: #ffba00;
+            }
+        }
+
+        @include screen($bp-pc) {
+            width: 7rem;
+            height: 7rem;
+        }
+
+        & > i {
+            font-size: 2.5rem;
+            color: $black-color;
+
+            cursor: pointer;
+
+            @include screen($bp-pc) {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+.modal {
+    z-index: 999999999;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    padding: 20vh 5vw;
+
+    @include screen($bp-pc) {
+        padding: 5rem;
+    }
+
+    background: rgba($color: #000000, $alpha: 0.9);
+
+    &__header {
+        margin: 2rem;
+        text-align: center;
+
+        @include screen($bp-pc) {
+            margin: 5rem;
+        }
+
+        &-title {
+            font-size: $font-size-c-title;
+            color: $white-color;
+
+            @include screen($bp-pc) {
+                font-size: $font-size-l-title;
+            }
+        }
+    }
+}
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+
+    font-size: 5rem;
+    cursor: pointer;
+
+    color: $white-color;
+
+    @include screen($bp-pc) {
+        font-size: 10rem;
+    }
+}
+.maps {
+    display: none;
+
+    @include screen($bp-pc) {
+        display: block;
+    }
+}

@@ -1,0 +1,28 @@
+@mixin columnObject($gap, $columnName, $columnMax) {
+  [class*='col-'] {
+    display: block;
+    padding-left: $gap;
+    padding-right: $gap;
+  }
+
+  @for $i from 0 through $columnMax {
+    $width: 1% * $i * 100 / $columnMax;
+
+    .col-#{$columnName}-#{$i} {
+      @if ($i == 0) {
+        display: none;
+      } @else {
+        flex: 0 0 $width;
+        max-width: $width;
+      }
+    }
+  }
+
+  @for $i from 1 through ($columnMax - 1) {
+    $width: 1% * $i * 100 / $columnMax;
+
+    .col-#{$columnName}-o-#{$i} {
+      margin-left: $width;
+    }
+  }
+}

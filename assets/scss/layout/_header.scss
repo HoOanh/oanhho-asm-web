@@ -1,0 +1,185 @@
+header {
+    z-index: 9999999;
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    transition: 0.5s;
+}
+.header {
+    @include flex(row, space-between);
+    margin-top: 0;
+
+    @include screen($bp-pc) {
+        margin-top: 2rem;
+        animation: fade 3s ease-out forwards;
+    }
+
+    &__logo {
+        width: 30%;
+        height: 5.5rem;
+        background-color: #ffcc00;
+
+        @include screen($bp-pc) {
+            width: 25%;
+            height: 7.5rem;
+            background-color: #ffcc00;
+        }
+
+        & > a {
+            text-decoration: none;
+
+            & > * {
+                height: 100%;
+                margin-right: 2rem;
+
+                text-align: end;
+                font-size: $font-size-c-content;
+                line-height: 4.5rem;
+
+                color: $white-color;
+
+                @include screen($bp-pc) {
+                    font-size: $font-size-l-body;
+                    line-height: 6.5rem;
+                }
+            }
+        }
+    }
+}
+.navbar {
+    width: 0;
+    transition: all 0.3s ease-in;
+
+    @include screen($bp-pc) {
+        display: block;
+        width: 75%;
+        max-height: 20vh;
+
+        background-color: inherit;
+    }
+
+    &__list {
+        @include flex(column, flex-start);
+        max-height: 10vh;
+
+        & > .fa-times {
+            display: block;
+            font-size: $font-size-c-title;
+        }
+        @include screen($bp-pc) {
+            @include flex(row, flex-end);
+            margin-right: 5vw;
+            height: 15vh;
+
+            & > .fa-times {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        @extend .c-reset-list;
+
+        margin-right: 3rem;
+
+        font-size: $font-size-c-content;
+
+        @include screen($bp-pc) {
+            font-size: $font-size-l-body;
+        }
+
+        & > a {
+            @extend .c-reset-link;
+            display: inline-block;
+            padding: 1rem;
+
+            transition: all 0.2s ease;
+        }
+        & > a.active,
+        & > a:hover {
+            padding-top: 1.5rem;
+            border-top: 0.2rem solid $white-color;
+
+            color: red;
+            background-color: rgba($color: $white-color, $alpha: 0.1);
+        }
+    }
+
+    & > .fa-bars {
+        position: absolute;
+        top: 0;
+        right: 10vw;
+        display: block;
+        @include screen($bp-pc) {
+            display: none;
+        }
+    }
+
+    &.show {
+        width: 40%;
+        background-color: rgba($color: #000, $alpha: 0.8);
+        height: 100vh;
+
+        & > .fa-bars {
+            right: -10rem;
+        }
+    }
+}
+
+header.sticky {
+    max-height: 4.5rem;
+    background: rgba($color: $white-color, $alpha: 0.85);
+    box-shadow: 0 5px 20px rgba($color: $white-color, $alpha: 0.5);
+
+    @include screen($bp-pc) {
+        margin-top: 0;
+        max-height: 5.5rem;
+    }
+
+    .header {
+        &__logo {
+            width: 25%;
+            max-height: 5.5rem;
+
+            background: rgba($color: $white-color, $alpha: 0.85);
+
+            @include screen($bp-pc) {
+                width: 25%;
+                height: 6.5rem;
+            }
+
+            & > a > * {
+                line-height: 4.5rem;
+                color: $black-color;
+            }
+        }
+    }
+
+    .navbar {
+        @include screen($bp-pc) {
+            &__link {
+                & > a {
+                    color: $black-color;
+                    font-size: $font-size-c-body;
+                }
+                & > a:hover,
+                & > a.active {
+                    padding-top: 1.5rem;
+
+                    border-bottom: 0.4rem solid #ffcc00;
+
+                    background-color: rgba($color: $black-color, $alpha: 0.1);
+                    color: red;
+
+                    opacity: 1;
+                    transition: all 0.2s ease-in;
+                }
+            }
+        }
+        & > .fa-bars {
+            font-size: $font-size-c-title;
+            color: $black-color;
+        }
+    }
+}

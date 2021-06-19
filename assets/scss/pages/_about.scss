@@ -1,0 +1,220 @@
+#about {
+    & .head {
+        padding: 0 10%;
+        background-color: #242424;
+
+        @include screen($bp-pc) {
+            padding: 8rem 0 0;
+        }
+
+        &__title {
+            padding: 1rem 0;
+            text-align: center;
+
+            @include screen($bp-pc) {
+                width: 50%;
+                margin-left: 26%;
+            }
+
+            & > * > a {
+                text-decoration: none;
+                font-size: $font-size-c-title;
+                font-weight: 400;
+                color: #ffba00;
+
+                @include screen($bp-pc) {
+                    font-size: $font-size-l-title;
+                }
+
+                & > strong {
+                    font-weight: 800;
+                }
+            }
+
+            &-sub {
+                font-size: $font-size-c-content;
+                font-weight: 400;
+                color: $white-color;
+
+                @include screen($bp-pc) {
+                    margin-top: 2.3rem;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+
+    & .navbar {
+        width: 100%;
+        height: 15vh;
+        margin-top: 1rem;
+
+        @include screen($bp-pc) {
+            padding-bottom: 6rem;
+            margin-top: 3.5rem;
+        }
+
+        &__list {
+            flex-direction: row;
+            justify-content: space-around;
+
+            @include screen($bp-pc) {
+                margin: 0;
+            }
+        }
+
+        &__link {
+            width: 20%;
+            font-size: 1.3rem;
+            font-weight: 500;
+
+            @include screen($bp-pc) {
+                margin: 0;
+                padding-bottom: 7rem;
+                text-align: center;
+                font-size: $font-size-l-body;
+            }
+        }
+    }
+
+    & .wp-body {
+        background-image: url(../img/backgroud/bg_about.jpg);
+        background-size: cover;
+
+        & .body {
+            padding-top: 2rem;
+            color: $white-color;
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            min-height: 70vh;
+
+            @include screen($bp-pc) {
+                min-height: 120rem;
+            }
+
+            &__head {
+                text-align: center;
+                font-size: $font-size-c-content;
+
+                color: #ffba00;
+
+                @include screen($bp-pc) {
+                    display: inline-block;
+                    margin-top: 14rem;
+                    margin-left: 62%;
+
+                    font-size: $font-size-l-body;
+                    color: $white-color;
+                }
+
+                & > * {
+                    text-transform: uppercase;
+                    font-weight: 300;
+                }
+            }
+
+            &__content {
+                width: 80%;
+                min-height: 40vh;
+                margin-left: 20%;
+
+                background: #ffba00;
+
+                @include screen($bp-pc) {
+                    width: 37%;
+                    height: 62.5rem;
+                    margin-left: 54%;
+                }
+
+                &-title {
+                    width: 70%;
+                    margin: 2rem;
+                    padding-top: 1rem;
+
+                    @include screen($bp-pc) {
+                        width: 80%;
+                        padding: 0.5rem;
+                    }
+
+                    & > * {
+                        text-transform: uppercase;
+                        font-weight: 300;
+
+                        @include screen($bp-pc) {
+                            margin-bottom: 0;
+
+                            font-size: $font-size-l-big-title;
+                            line-height: 5rem;
+                        }
+                    }
+                }
+
+                &-text {
+                    margin: 2rem;
+                    margin-bottom: 5rem;
+
+                    font-size: $font-size-c-content;
+
+                    @include screen($bp-pc) {
+                        margin: 4rem 0 16rem 3.5rem;
+                        padding: 0;
+
+                        & > * {
+                            font-size: $font-size-l-title;
+                            font-weight: 400;
+                            line-height: 4rem;
+                        }
+                    }
+                }
+
+                &-price,
+                &-date {
+                    margin-left: 65%;
+                    font-size: 1.3rem;
+                    padding-bottom: 0.5rem;
+
+                    & > * {
+                        font-weight: 400;
+                    }
+
+                    @include screen($bp-pc) {
+                        margin-left: 55%;
+
+                        & > * {
+                            font-size: $font-size-l-title;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            &__btn {
+                display: inline-block;
+                margin: 2rem 0;
+                margin-left: 60%;
+
+                background: #ffba00;
+
+                & > button {
+                    border: none;
+                    width: 12rem;
+                    height: 4rem;
+
+                    text-transform: uppercase;
+                    font-size: $font-size-c-content;
+                    color: $white-color;
+                }
+                @include screen($bp-pc) {
+                    margin-top: 4.5rem;
+                    margin-left: 60%;
+
+                    & > button {
+                        width: 47rem;
+                        height: 11.5rem;
+
+                        font-size: $font-size-l-title;
+                    }
+                }
+            }
+        }
+    }
+}

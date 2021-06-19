@@ -1,0 +1,47 @@
+// mobile first
+$breakpoints: (
+  tablet: 760,
+  pc: 1200,
+);
+
+$typography: (
+  _cSizeS: (
+    primary: 1.5,
+  ),
+  _cSizeM: (
+    primary: 2,
+  ),
+  _cSizeL: (
+    primary: 2.2,
+  ),
+  _lSizeS: (
+    primary: 2.5,
+  ),
+  _lSizeM: (
+    primary: 3.2,
+  ),
+  _lSizeL: (
+    primary: 4.1,
+  ),
+  _lSizeXL: (
+    primary: 5,
+  ),
+);
+
+$color: (
+  _black: (
+    primary: #000,
+  ),
+  _white: (
+    primary: #fff,
+  ),
+  _gray: (
+    primary: #666,
+  ),
+  _text: (
+    primary: #333,
+  ),
+  _brand: (
+    primary: #000,
+  ),
+);

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="./vendor/grid_sytem/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+
+  <body>
+    <!-- modal button -->
+    <div class="modal-icon">
+      <button class="modal-btn">
+        <i class="fas fa-comments"></i>
+      </button>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal__header">
+        <h3 class="modal__header-title">Contact <em>Us</em></h3>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal__body">
+        <div class="grid wide">
+          <div class="row container">
+            <div class="col-l-5 col-c-4 maps">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12350.98340754404!2d106.62377646777993!3d10.849021266041348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529b6a2b351a5%3A0x11690ada8c36f9bc!2sFPT%20Polytechnic!5e0!3m2!1sen!2sus!4v1623849704340!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="col-l-7 col-c-4">
+              <form action="#" id="form-contact">
+                <div class="user-details">
+                  <div class="input-box">
+                    <input
+                      type="text"
+                      name="username"
+                      maxlength="15"
+                      minlength="4"
+                      pattern="^[a-zA-Z0-9_.-]*$"
+                      id="name"
+                      placeholder="Your name..."
+                      required
+                    />
+                  </div>
+                  <div class="input-box">
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Your email..."
+                      pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                      required
+                    />
+                  </div>
+                  <div class="input-box">
+                    <textarea
+                      id="message"
+                      name="messenger"
+                      cols="30"
+                      rows="10"
+                      placeholder="Your message..."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="button">
+                  <input type="submit" value="Send message now" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================ END BOX MODEL =================== -->
+    <div id="main">
+      <header class="header">
+        <div class="header__logo">
+          <a href="index.html">
+            <h2>#Pizzaria.</h2>
+          </a>
+        </div>
+        <nav class="navbar">
+          <i class="fas fa-bars"></i>
+          <ul class="navbar__list">
+            <i class="fas fa-times"></i>
+            <li class="navbar__link">
+              <a href="#home" class="active">Home</a>
+            </li>
+            <li class="navbar__link"><a href="#blog">BLog++</a></li>
+            <li class="navbar__link"><a href="#new-menu">Hot Menu</a></li>
+            <li class="navbar__link"><a href="#about">About us</a></li>
+            <li class="navbar__link"><a href="#gallery">Gallery</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- ================END HEADER============== -->
+      <main>
+        <section id="home">
+          <div class="banner">
+            <div class="banner__title">
+              <h1><strong>Grand</strong>Opening</h1>
+            </div>
+            <button class="banner__button">Read more</button>
+          </div>
+        </section>
+        <!-- ================END HOME============== -->
+        <section id="blog">
+          <div class="news">
+            <div class="news__background-content"></div>
+            <div class="news__background-img">
+              <img src="./assets/img/new-img.jpg" alt="" />
+            </div>
+            <h2 class="news__format">News format</h2>
+            <div class="news__list">
+              <h2 class="news__list-title"><a href="#">What new?</a></h2>
+              <h2 class="news__list-body">
+                | Sed do eiusmod tempor incididunt ut Labore et
+              </h2>
+              <p class="news__list-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A aut
+                magnam quisquam. Mollitia, voluptatem consequatur cum odio
+                quaerat cumque culpa repudiandae aperiam aliquid commodi maiores
+                consequuntur saepe incidunt veniam numquam!
+              </p>
+              <h2 class="news__list-body">| Dolore magna aliqua</h2>
+              <h2 class="news__list-body">
+                | Quis ipsum suspendisse ultrices gravida
+              </h2>
+            </div>
+          </div>
+          <div class="post container">
+            <div class="grid wide">
+              <div class="row">
+                <div class="col-l-4 col-m-8 col-c-4 post__list">
+                  <div class="post__list-title">I. new format</div>
+                  <div class="post__list-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium ipsum dolores porro aut! Cumque, nisi
+                    exercitationem.
+                  </div>
+                </div>
+                <div class="col-l-4 col-m-8 col-c-4 post__list">
+                  <div class="post__list-title">II. master classes</div>
+                  <div class="post__list-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem harum blanditiis, ducimus iusto molestias dolores
+                    quibusdam.
+                  </div>
+                </div>
+                <div class="col-l-4 col-m-8 col-c-4 post__list">
+                  <div class="post__list-title">III. pizza restaurant</div>
+                  <div class="post__list-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam non tenetur corrupti cumque nemo. Praesentium,
+                    aspernatur.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================END BLOG============== -->
+        <section id="new-menu">
+          <div class="wp-menu">
+            <div class="logo">
+              <h2><a href="#">#Pizzaria.</a></h2>
+            </div>
+            <div class="title">
+              <h1>our new menu</h1>
+            </div>
+            <div class="menu">
+              <div class="menu__list">
+                <div class="menu__list-title">
+                  <h4>
+                    <div>I</div>
+                    eiusmod Sed do
+                  </h4>
+                </div>
+                <div class="menu__list-content">
+                  <p>(tempor, incididunt, utas, labore, etws)</p>
+                </div>
+                <div class="menu__list-price">
+                  <p>10$</p>
+                </div>
+              </div>
+              <div class="menu__list">
+                <div class="menu__list-title">
+                  <h4>
+                    <div>II</div>
+                    DO Dolore
+                  </h4>
+                </div>
+                <div class="menu__list-content">
+                  <p>(magna, aliqua, lorem)</p>
+                </div>
+                <div class="menu__list-price">
+                  <p>14$</p>
+                </div>
+              </div>
+              <div class="menu__list">
+                <div class="menu__list-title">
+                  <h4>
+                    <div>III</div>
+                    eiusmod Sed do
+                  </h4>
+                </div>
+                <div class="menu__list-content">
+                  <p>(tempor, incididunt, utas, labore, etws)</p>
+                </div>
+                <div class="menu__list-price">
+                  <p>20$</p>
+                </div>
+              </div>
+              <div class="menu__list">
+                <div class="menu__list-title">
+                  <h4>
+                    <div>IV</div>
+                    DO Dolore
+                  </h4>
+                </div>
+                <div class="menu__list-content">
+                  <p>(magna, aliqua, lorem)</p>
+                </div>
+                <div class="menu__list-price">
+                  <p>10$</p>
+                </div>
+              </div>
+            </div>
+            <div class="sub-menu">
+              <h3><a href="#">||| _ top in menu</a></h3>
+              <h3><a href="#">|| _ sale iteam</a></h3>
+              <h3><a href="#">| _ made by shef</a></h3>
+            </div>
+          </div>
+        </section>
+        <!-- ================END NEW MENU============== -->
+        <section id="about">
+          <div class="head">
+            <div class="head__title">
+              <h1>
+                <a href="#">ABOUT OUR <strong>CONCEPT</strong></a>
+              </h1>
+              <p class="head__title-sub">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis
+              </p>
+            </div>
+            <div class="navbar">
+              <ul class="navbar__list">
+                <li class="navbar__link"><a href="#">Pizza</a></li>
+                <li class="navbar__link"><a href="#">Modern concept</a></li>
+                <li class="navbar__link"><a href="#">Story from shef</a></li>
+                <li class="navbar__link"><a href="#">Gallery</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wp-body">
+            <div class="body">
+              <div class="body__head">
+                <h2>MasterClass</h2>
+              </div>
+              <div class="body__content">
+                <div class="body__content-title">
+                  <h1>| the recipe for the most delicious pizza dough |</h1>
+                </div>
+                <div class="body__content-text">
+                  <h3>waiting for you!</h3>
+                </div>
+                <div class="body__content-price">
+                  <h3>Price_15$</h3>
+                </div>
+                <div class="body__content-date">
+                  <h3>12:00-15:00</h3>
+                </div>
+              </div>
+              <div class="body__btn">
+                <button>apply</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================END ABOUT============== -->
+        <section id="gallery">
+          <div class="title">
+            <h1>Gallery</h1>
+          </div>
+          <div class="gallery">
+            <div class="grid">
+              <div class="row">
+                <div class="col-l-6 col-c-4 gallery-img">
+                  <img src="./assets/img/callery-img-item1.jpg" alt="" />
+                </div>
+                <div class="col-l-3 col-c-2 gallery-img">
+                  <img src="./assets/img/callery-img-item2.jpg" alt="" />
+                </div>
+                <div class="col-l-3 col-c-2 gallery-img">
+                  <img src="./assets/img/callery-img-item3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="gallery__body">
+              <div class="gallery__content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis
+                </p>
+              </div>
+              <div class="gallery__logo">
+                <h2>#pizzeria.</h2>
+              </div>
+              <div class="gallery__social">
+                <ul class="gallery__social-list">
+                  <li>
+                    <p class="gallery__social-title">| find us here</p>
+                  </li>
+                  <li class="gallery__social-link">
+                    <a href="" class="gallery__social-icon">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="gallery__social-link">
+                    <a href="" class="gallery__social-icon">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="gallery__social-link">
+                    <a href="" class="gallery__social-icon">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="gallery__social-link">
+                    <a href="" class="gallery__social-icon">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </li>
+                </ul>
+                <div class="gallery__live">
+                  <p class="gallery__live-title">| ask as here</p>
+                  <a href="#" class="gallery__live-link">www.#pizzeria.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ================END GALLẺY============== -->
+      </main>
+      <footer class="footer">
+        <div class="grid wide">
+          <div class="row">
+            <div class="col-l-6 col-c-4">
+              <div class="about">
+                <div class="about__title">
+                  <h2>about</h2>
+                </div>
+                <div class="about__content">
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                  <p>tetur adipisicing elit, sed do eiusmod tempor inci-</p>
+                  <p>didunt ultimam quantum</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-l-2 col-c-2">
+              <div class="details">
+                <div class="details__title">
+                  <h2>menu</h2>
+                </div>
+                <ul class="details__list">
+                  <li class="details__link">
+                    <a href="#">Team</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Join us</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Ethic</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Goals</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-l-2 col-c-2">
+              <div class="details">
+                <div class="details__title">
+                  <h2>shef</h2>
+                </div>
+                <ul class="details__list">
+                  <li class="details__link">
+                    <a href="#">Team</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Join us</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Ethic</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Goals</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-l-2 col-c-2">
+              <div class="details">
+                <div class="details__title">
+                  <h2>contact</h2>
+                </div>
+                <ul class="details__list">
+                  <li class="details__link">
+                    <a href="#">Team</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Join us</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Ethic</a>
+                  </li>
+                  <li class="details__link">
+                    <a href="#">Goals</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ================END FOOTER============== -->
+    </div>
+  </body>
+  <script src="assets/js/main.js"></script>
+</html>

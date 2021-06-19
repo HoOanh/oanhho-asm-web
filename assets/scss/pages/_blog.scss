@@ -1,0 +1,220 @@
+#blog {
+    background-color: $white-color;
+
+    /*================= ANIMATION ==================*/
+    & > .news > *,
+    & > .post > .grid > .row > * {
+        opacity: 0;
+    }
+
+    &.animation {
+        background-color: #141414;
+        transition: all 0.3s ease-in;
+
+        @include screen($bp-pc) {
+            background-color: #242424;
+        }
+        & > .news > .news {
+            &__list,
+            &__background-content {
+                animation: fadeInDown 1.5s ease-in forwards;
+            }
+            &__background-img {
+                animation: scale 1s ease-in forwards;
+            }
+            &__list {
+                animation-delay: 2s;
+            }
+            &__format {
+                animation: fade 5s ease-out forwards;
+                animation-delay: 2s;
+            }
+        }
+
+        & .post > .grid > .row > .post {
+            &__list {
+                animation: fadeInLeft 2s ease-out forwards;
+                animation-delay: 4s;
+            }
+            &__list:nth-child(2n) {
+                animation-delay: 6s;
+            }
+            &__list:last-child {
+                animation-delay: 8s;
+            }
+        }
+    }
+    /*================= END ANIMATION ==================*/
+}
+
+.news {
+    @include flex(row);
+    position: relative;
+
+    padding: 5rem 3vw;
+    max-height: 50vh;
+    overflow: hidden;
+
+    @include screen($bp-pc) {
+        justify-content: start;
+        margin: 0;
+        padding: 16rem 0;
+        max-height: 100vh;
+    }
+
+    &__background-content {
+        z-index: 1;
+        position: absolute;
+        top: 37%;
+        left: 9%;
+
+        display: none;
+
+        background-color: #ffba00;
+
+        @include screen($bp-pc) {
+            display: block;
+            width: 90rem;
+            height: 18rem;
+        }
+    }
+
+    &__background-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 100%;
+
+        @include screen($bp-pc) {
+            top: 20%;
+            right: 0;
+
+            width: 42%;
+        }
+
+        & > img {
+            width: 100%;
+        }
+    }
+
+    &__format {
+        display: none;
+
+        z-index: 10;
+        transform: translateX(14%) rotate(-90deg);
+
+        font-size: $font-size-l-title;
+        font-weight: 300;
+
+        letter-spacing: 0.7rem;
+        line-height: 25rem;
+
+        color: white;
+
+        @include screen($bp-pc) {
+            display: block;
+        }
+    }
+
+    &__list {
+        z-index: 10000;
+        width: 60%;
+        color: $white-color;
+
+        @include screen($bp-pc) {
+            width: 47.5%;
+        }
+
+        &-title {
+            margin-bottom: 1.2rem;
+
+            font-size: $font-size-c-title;
+            font-weight: 400;
+
+            @include screen($bp-pc) {
+                margin-bottom: 2rem;
+
+                font-size: $font-size-l-title;
+            }
+
+            & > a {
+                @extend .c-reset-link;
+            }
+        }
+
+        &-body {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 3rem;
+
+            @include screen($bp-pc) {
+                font-size: $font-size-l-body;
+                line-height: 5rem;
+            }
+        }
+
+        &-content {
+            display: none;
+
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+            margin-left: 3rem;
+            margin-top: -4.5rem;
+
+            @include screen($bp-pc) {
+                display: block;
+            }
+        }
+    }
+}
+
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 15rem;
+    margin: 2rem;
+    background-color: #fff;
+    min-height: 30vh;
+
+    @include screen($bp-pc) {
+        display: block;
+    }
+
+    &__list {
+        margin: 2rem 0;
+
+        @include screen($bp-pc) {
+            padding: 5.5rem;
+        }
+    }
+
+    &__list-title {
+        font-size: $font-size-c-body;
+        font-weight: 600;
+        text-align: center;
+
+        color: #ffba00;
+
+        @include screen($bp-pc) {
+            font-size: $font-size-l-content;
+            font-weight: bold;
+            text-align: start;
+        }
+    }
+
+    &__list-content {
+        font-size: 1.3rem;
+        text-align: justify;
+        padding: 1rem 5vw;
+
+        @include screen($bp-pc) {
+            padding: 0;
+            margin-top: 4rem;
+            font-size: 1.65rem;
+            text-align: start;
+        }
+    }
+}

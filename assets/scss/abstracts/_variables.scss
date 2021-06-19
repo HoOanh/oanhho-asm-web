@@ -1,0 +1,25 @@
+$bp-tablet: convertPxToEm(map-get($breakpoints, tablet));
+$bp-pc: convertPxToEm(map-get($breakpoints, pc));
+
+$font-size-l-big-title: map-deep-get($typography, _lSizeXL, "primary") * 1rem;
+
+$font-size-c-content: map-deep-get($typography, _cSizeS, primary) * 1rem;
+$font-size-c-body: map-deep-get($typography, _cSizeM, primary) * 1rem;
+$font-size-c-title: map-deep-get($typography, _cSizeL, primary) * 1rem;
+$font-size-l-content: map-deep-get($typography, _lSizeS, primary) * 1rem;
+$font-size-l-body: map-deep-get($typography, _lSizeM, primary) * 1rem;
+$font-size-l-title: map-deep-get($typography, _lSizeL, primary) * 1rem;
+
+// ----------------------------------------------------
+
+$primary-color: map-deep-get($color, _brand, "primary");
+
+$black-color: map-deep-get($color, _black, primary);
+$white-color: map-deep-get($color, _white, primary);
+$gray-color: map-deep-get($color, _gray, primary);
+
+$text-color: map-deep-get($color, _text, primary);
+
+:root {
+  --font-family-normal: "Literata", "Philosopher", "Segoe UI", Tahoma, Verdana, sans-serif;
+}

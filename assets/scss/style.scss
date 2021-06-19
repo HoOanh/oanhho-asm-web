@@ -1,0 +1,34 @@
+//google font
+@import url("https://fonts.googleapis.com/css2?family=Literata:wght@300;400;500;600;700;800&family=Philosopher&display=swap");
+
+// Configuration and helpers
+@import "./abstracts/variables-structure";
+@import "./abstracts/functions";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// Base stuff
+@import "./base/animation";
+@import "./base/global";
+
+// Layout-related sections
+@import "./layout/header";
+@import "./layout/footer";
+
+// Components
+@import "./components/button";
+@import "./components/forms";
+
+// Page-specific styles
+@import "./pages/home";
+@import "./pages/blog";
+@import "./pages/new-menu";
+@import "./pages/about";
+@import "./pages/gallery";
+@import "./pages/contact";
+
+// Themes
+@import "./themes/light";
+
+// Utilities
+@import "./base/utilities";

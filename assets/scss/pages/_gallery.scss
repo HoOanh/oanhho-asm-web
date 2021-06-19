@@ -1,0 +1,227 @@
+#gallery {
+    position: relative;
+    padding: 1rem 0;
+
+    background-color: #242424;
+
+    @include screen($bp-pc) {
+        min-height: 126rem;
+
+        &::after {
+            content: "";
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 29rem;
+            width: 25rem;
+            height: 100%;
+            background-color: #ffba00;
+        }
+    }
+    & .title {
+        margin: 1rem;
+
+        text-align: center;
+        font-size: $font-size-c-title;
+        font-weight: 500;
+
+        @include screen($bp-pc) {
+            margin-top: 10rem;
+            font-size: $font-size-l-title;
+
+            & > * {
+                font-weight: bold;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    & .gallery {
+        position: relative;
+        z-index: 10;
+
+        & .row {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        &-img {
+            height: 73vw;
+            overflow: hidden;
+
+            & img {
+                width: 100%;
+                min-height: 100%;
+                margin: 1rem 0;
+            }
+
+            @include screen($bp-pc) {
+                height: 48rem;
+                padding: 5px;
+
+                & img {
+                    min-height: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__body {
+            position: relative;
+            min-height: 30vh;
+
+            @include screen($bp-pc) {
+                min-height: 56rem;
+            }
+        }
+
+        &__content {
+            padding: 1rem;
+
+            text-align: center;
+            font-size: $font-size-c-content;
+
+            color: #fff;
+
+            @include screen($bp-pc) {
+                position: absolute;
+                top: 0;
+                left: 29rem;
+
+                width: 25rem;
+                padding: 0 0 0 1rem;
+
+                font-size: $font-size-c-title;
+                text-align: start;
+                line-height: 4rem;
+
+                & > * {
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &__logo {
+            display: none;
+
+            @include screen($bp-pc) {
+                display: block;
+                position: absolute;
+                top: 11rem;
+                left: 42%;
+
+                & > * {
+                    font-size: $font-size-l-title;
+                    font-weight: 600;
+                    color: $white-color;
+                }
+            }
+        }
+
+        &__social {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            margin: 2rem;
+            height: 10rem;
+
+            @include screen($bp-pc) {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                width: 46rem;
+                min-height: 11rem;
+            }
+
+            &-list {
+                @extend .c-reset-list;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+
+                background-color: $white-color;
+                color: $black-color;
+
+                opacity: 0.8;
+
+                @include screen($bp-pc) {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+                &:hover {
+                    opacity: 1;
+                    transform: scale3d(1.2, 1.2, 1.5);
+                    transition: all 0.2s ease-in;
+                    border-radius: 0.5rem;
+
+                    & > * {
+                        color: #ffba00;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &-title {
+                font-size: $font-size-c-content;
+                line-height: 3rem;
+                color: $white-color;
+
+                @include screen($bp-pc) {
+                    font-size: $font-size-c-body;
+                }
+            }
+
+            &-icon {
+                font-size: $font-size-c-content;
+                color: $black-color;
+
+                @include screen($bp-pc) {
+                    font-size: $font-size-c-body;
+                }
+            }
+        }
+
+        &__live {
+            display: flex;
+
+            &-title {
+                font-size: $font-size-c-content;
+                color: $white-color;
+
+                @include screen($bp-pc) {
+                    font-size: $font-size-c-body;
+                }
+            }
+
+            &-link {
+                margin-left: 2rem;
+
+                text-decoration: none;
+                font-size: $font-size-c-body;
+                line-height: 1.5rem;
+
+                color: #ffba00;
+
+                @include screen($bp-pc) {
+                    font-size: $font-size-l-body;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+footer {
+    background-color: #483500;
+    padding: 0 3vw;
+
+    @include screen($bp-pc) {
+        min-height: 32rem;
+        padding-top: 6.5rem;
+    }
+
+    & .about {
+        text-align: center;
+        color: $white-color;
+
+        @include screen($bp-pc) {
+            margin: 2rem 0;
+            text-align: start;
+        }
+
+        &__title {
+            padding: 2rem 0;
+
+            text-transform: uppercase;
+            font-size: $font-size-c-content;
+            font-weight: 400;
+
+            @include screen($bp-pc) {
+                & > * {
+                    margin-top: -3rem;
+                    font-size: $font-size-l-content;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__content {
+            font-size: 1.2rem;
+            font-weight: 300;
+
+            @include screen($bp-pc) {
+                margin-top: 2.5rem;
+                font-size: $font-size-c-body;
+            }
+        }
+    }
+
+    & .details {
+        padding: 2rem;
+        text-align: center;
+        color: $white-color;
+
+        &__title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+
+            @include screen($bp-pc) {
+                & > * {
+                    font-size: $font-size-l-content;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__list {
+            @extend .c-reset-list;
+            margin-top: 2rem;
+
+            @include screen($bp-pc) {
+                margin-top: 4.5rem;
+            }
+        }
+
+        &__link > * {
+            @extend .c-reset-link;
+            font-size: $font-size-c-content;
+
+            @include screen($bp-pc) {
+                line-height: 3rem;
+                font-size: $font-size-c-title;
+            }
+        }
+    }
+}
